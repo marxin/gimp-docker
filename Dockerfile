@@ -1,7 +1,7 @@
 FROM marxin/gcc-docker
 MAINTAINER Martin Liška
 
-WORKDIR /abuild/gimp-2.6.12
+WORKDIR /abuild/gimp-2.8.14
 ENV CFLAGS -flto=4
 ENV CXXFLAGS -flto=4
 ENV LDFLAGS -flto=4
