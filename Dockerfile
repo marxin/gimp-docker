@@ -6,7 +6,6 @@ ENV CFLAGS -flto=4
 ENV CXXFLAGS -flto=4
 ENV LDFLAGS -flto=4
 
-RUN echo "CPUs: `nproc`"
-RUN echo "MEMORY: " `cat /proc/meminfo | grep MemTotal`
+RUN echo "CPUs: `nproc`" && echo "MEMORY: " `cat /proc/meminfo | grep MemTotal` && cat /proc/cpuinfo | tail -n50 && df -h
 
 RUN ./configure && make -j$(nproc) V=1
